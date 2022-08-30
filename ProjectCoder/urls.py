@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppCoder.views import familiar,padre,madre,hijo
+from AppCoder.views import *
 
 urlpatterns = [
     
-    path("familiar/", familiar, name="familiar"),
-    path("padre/", padre, name="padre"),
+    path("familiar/", Familiar, name="Familiar"),
+    path("padre/", Padre, name="Padre"),
     path("madre/", madre, name="madre"),
     path("hijo/", hijo, name="hijo")
 ]

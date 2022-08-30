@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import familiar
+from .models import Familiar,Padre
 from django.http import HttpResponse
 # Create your views here.
 
@@ -17,25 +17,18 @@ from django.http import HttpResponse
 #     return HttpResponse(texto)
 
 
-def familiar(request):
+def Familiar(request):
 
-    nom = "Juan"
-    ap  = "Perez"
-    dic = {"Nombre:nom", "Apellido:ap"}
     return render (request, "templates/familiar.html")
 
-def padre(request):
-    nom = "Adolfo"
-    ap  = "Perez"
-    dic = {"Nombre:nom", "Apellido:ap"}
-    micontext = 
-    # return render (request, "templates/padre.html")
+def Padre(request):
+    Padre.__str__()
+    return render (request,  "padre.html")
 
 def madre(request):
-    nom = "Marta"
-    ap  = "Perez"
-    dic = {"Nombre:nom", "Apellido:ap"}
+    nombre="Cristina"
     return render (request, "templates/madre.html")
 
 def hijo(request):
+    nombre="Matias"
     return render (request, "templates/hijo.html")

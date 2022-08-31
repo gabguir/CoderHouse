@@ -3,18 +3,18 @@ from .models import *
 from django.http import HttpResponse
 # Create your views here.
 
-def familia(self):
+def familia(request):
 
     familia = Familia(ap="Perez" , nom_padre="Juan", nom_madre="Marta", nom_hijo="Lucas", padres_nac="Arg")   
     familia.save() 
     data = f" Familia:{familia.ap} Padre:{familia.nom_padre} Madre:{familia.nom_madre} Hijo:{familia.nom_hijo} Nacionalidad: {familia.padres_nac}"
-    
-    return HttpResponse(data)
-    # return render (request, "familia.html")
+    familia = Familia(ap="Perez")
+    # return HttpResponse(data)
+    return render (request, "familia.html")
 
 def padre(request):
 
-    padre = Padre(nom="Juan", edad="asd", ap="Perez", nac="Arg")   
+    padre = Padre(nom="Juan", edad="61", ap="Perez", nac="Arg")   
     padre.save() 
     data = f">>> Nombre:{padre.nom} Apellido:{padre.ap} Edad:{padre.edad}  Nacionalidad: {padre.nac}"
     
@@ -23,7 +23,7 @@ def padre(request):
 
 def madre(request):
 
-    madre = Madre(nom="Marta", ap="Perez" , edad="52" , nac="Arg")   
+    madre = Madre(nom="Marta", ap="Perez" , nac="Arg")   
     madre.save() 
     data = f">>> Nombre:{madre.nom} \\ Apellido:{madre.ap} \\ Edad:{madre.edad}  Nacionalidad: {madre.nac}"
     
@@ -32,7 +32,7 @@ def madre(request):
 
 def hijo(request):
 
-    hijo = Hijo(nom="Lucas", ap="Perez" , edad="14" , nac="Arg")   
+    hijo = Hijo(nom="Lucas", ap="Perez" , nac="Arg")   
     hijo.save() 
     data = f">>> Nombre:{hijo.nom} \\ Apellido:{hijo.ap} \\ Edad:{hijo.edad}  Nacionalidad: {hijo.nac}"
     

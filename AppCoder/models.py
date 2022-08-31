@@ -2,42 +2,43 @@ from django.db import models
 
 # Create your models here.
     
-class Familiar(models.Model):
+class Familia(models.Model):
 
-    nombre= models.CharField(max_length=50)
-    apellido= models.CharField(max_length=50)
-    edad=models.CharField(max_length=50)
-    nac=models.CharField(max_length=50)
+    ap         = models.CharField(max_length=50)
+    nom_padre  = models.CharField(max_length=50)
+    nom_madre  = models.CharField(max_length=50)
+    nom_hijo   = models.CharField(max_length=50)
+    padres_nac = models.CharField(max_length=50)
 
-    def __str__(self):
-        return self.nombre+" "+self.apellido+self.edad+" "+self.nac
+    # def __str__(self):
+    #     return self.nom_padre
 
 class Padre(models.Model):
 
-    nombre= models.CharField(max_length=50)
-    apellido= models.CharField(max_length=50)
-    edad=models.CharField(max_length=50)
-    nac=models.CharField(max_length=50)
+    nom  = models.CharField(max_length=50)
+    ap   = models.CharField(max_length=50)
+    edad = models.IntegerField
+    nac  = models.CharField(max_length=20)
+
+    # def __str__(self):
+    #     return "Padre:" +self.nom+", "+self.ap+", "+self.edad+", "+self.nac
+
+class Madre(models.Model):
+
+    nom  = models.CharField(max_length=50)
+    ap   = models.CharField(max_length=50)
+    edad = models.IntegerField
+    nac  = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.nombre+" "+self.apellido+self.edad+" "+self.nac
+        return "Madre:" +self.nom+", "+self.ap+", "+self.edad+", "+self.nac
 
-class madre(models.Model):
+class Hijo(models.Model):
 
-    nombre= models.CharField(max_length=50)
-    apellido= models.CharField(max_length=50)
-    edad=models.CharField(max_length=50)
-    nac=models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.nombre+" "+self.apellido+self.edad+" "+self.nac
-
-class hijo(models.Model):
-
-    nombre= models.CharField(max_length=50)
-    apellido= models.CharField(max_length=50)
-    edad=models.CharField(max_length=50)
-    nac=models.CharField(max_length=50)
+    nom  = models.CharField(max_length=50)
+    ap   = models.CharField(max_length=50)
+    edad = models.IntegerField
+    nac  = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.nombre+" "+self.apellido+self.edad+" "+self.nac
+        return "Hijo:" +self.nom+", "+self.ap+", "+self.edad+", "+self.nac

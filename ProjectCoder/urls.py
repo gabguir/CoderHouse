@@ -19,8 +19,8 @@ from AppCoder.views import *
 
 urlpatterns = [
     
-    path("familiar/", Familiar, name="Familiar"),
-    path("padre/", Padre, name="Padre"),
-    path("madre/", madre, name="madre"),
-    path("hijo/", hijo, name="hijo")
+    path("", familia, name="Familia"),
+    path("padre/", padre, name="Padre"),
+    path("madre/", madre, name="Madre"),
+    path("hijo/", hijo, name="Hijo")
 ]

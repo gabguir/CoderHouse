@@ -7,16 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    {% comment %} {% extends "AppCoder/padre.html" %} {% endcomment %}
 
     {% load static %}
     
     {% block titulo %}
     <h1 class="mb-5">El padre</h1>
     {% endblock %}
-
-    {% block contenido_que_cambia %}
-    <p>EL nombre del padre es: {{Nombre}}</p>
+    
+    {% comment %} {% block contenido_que_cambia %}
+    <h5>Nombre: {{nom}} </h5>
+    <h5>Apellido: {{ap}} </h5>
+    <h5>Edad: {{edad}} </h5>
+    <h5>Nacionalidad: {{nac}} </h5> {% endcomment %}
     {% endblock %}
     
 </body>

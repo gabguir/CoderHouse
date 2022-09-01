@@ -13,17 +13,16 @@ class Familia(models.Model):
     # def __str__(self):
     #     return self.nom_padre
 
-class Padre(models.Model):
-
+class Miembro(models.Model):
     nom  = models.CharField(max_length=50)
     ap   = models.CharField(max_length=50)
     edad = models.IntegerField()
     nac  = models.CharField(max_length=20)
 
-    # def __str__(self):
-    #     return "Padre:" +self.nom+", "+self.ap+", "+self.edad+", "+self.nac
+    def __str__(self):
+        return f"Miembro de la familia: {self.nom} {self.ap} {self.edad} {self.nac}"
 
-class Madre(models.Model):
+""" class Madre(models.Model):
 
     nom  = models.CharField(max_length=50)
     ap   = models.CharField(max_length=50)
@@ -41,4 +40,4 @@ class Hijo(models.Model):
     nac  = models.CharField(max_length=20)
 
     def __str__(self):
-        return "Hijo:" +self.nom+", "+self.ap+", "+self.edad+", "+self.nac
+        return "Hijo:" +self.nom+", "+self.ap+", "+self.edad+", "+self.nac """

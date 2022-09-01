@@ -17,7 +17,7 @@ class Padre(models.Model):
 
     nom  = models.CharField(max_length=50)
     ap   = models.CharField(max_length=50)
-    edad = models.IntegerField
+    edad = models.IntegerField()
     nac  = models.CharField(max_length=20)
 
     # def __str__(self):
@@ -27,7 +27,7 @@ class Madre(models.Model):
 
     nom  = models.CharField(max_length=50)
     ap   = models.CharField(max_length=50)
-    edad = models.IntegerField
+    edad = models.IntegerField()
     nac  = models.CharField(max_length=20)
 
     def __str__(self):
@@ -37,7 +37,7 @@ class Hijo(models.Model):
 
     nom  = models.CharField(max_length=50)
     ap   = models.CharField(max_length=50)
-    edad = models.IntegerField
+    edad = models.IntegerField()
     nac  = models.CharField(max_length=20)
 
     def __str__(self):

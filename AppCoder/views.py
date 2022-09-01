@@ -23,7 +23,7 @@ def padre(request):
 
 def madre(request):
 
-    madre = Madre(nom="Marta", ap="Perez" , nac="Arg")   
+    madre = Madre(nom="Marta", ap="Perez" , edad="54", nac="Arg")   
     madre.save() 
     data = f">>> Nombre:{madre.nom} \\ Apellido:{madre.ap} \\ Edad:{madre.edad}  Nacionalidad: {madre.nac}"
     
@@ -32,7 +32,7 @@ def madre(request):
 
 def hijo(request):
 
-    hijo = Hijo(nom="Lucas", ap="Perez" , nac="Arg")   
+    hijo = Hijo(nom="Lucas", ap="Perez" , edad=12, nac="Arg")   
     hijo.save() 
     data = f">>> Nombre:{hijo.nom} \\ Apellido:{hijo.ap} \\ Edad:{hijo.edad}  Nacionalidad: {hijo.nac}"
     
